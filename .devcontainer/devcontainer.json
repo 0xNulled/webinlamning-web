@@ -1,0 +1,41 @@
+{
+  "name": "Mettalix",
+
+  "build": {
+    "dockerfile": "Dockerfile",
+  },
+
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "3000": {
+      "label": "Vite",
+      "description": "npm run dev"
+    }
+  },
+
+  "features": {
+    "ghcr.io/devcontainers/features/git": {},
+    //"ghcr.io/devcontainers/features/node": {}, //I contaierfilen
+  },
+
+  "postCreateCommand": "npm install",
+  "remoteUser": "node",
+
+  "customizations":{
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "vscodevim.vim"
+      ],
+      "settings": {
+        "editor.formatOnSave": true
+      }
+    },
+    "jetbrains": {
+      "plugins" : [
+        "IdeaVim"
+      ],
+    }
+  }
+}
