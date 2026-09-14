@@ -2,7 +2,7 @@
   "name": "Mettalix",
 
   "build": {
-    "dockerfile": "Dockerfile",
+    "dockerfile": "Containerfile",
   },
 
   "forwardPorts": [5173],
