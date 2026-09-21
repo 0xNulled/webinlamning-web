@@ -21,12 +21,32 @@ function BandCard(){
         .finally(() => setLoading(false))
     },[]);
 
-    function handleClick(id) {
-        setAlbum(
-            album.map((a) => 
-                a.id == id ? {...a, listeningStatus: !a.listeningStatus}  : a 
-            )
+    async function handleClick(id) {
+        
+        const fetchedAlbum = album.find((a) => a.id == id);
+        if (!fetchedAlbum) return;
+
+        try {
+            const res = await fetch(`${API_URL}/${id}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ ...fetchedAlbum, listeningStatus: !fetchedAlbum.listeningStatus }),
+        });
+        if (!res.ok) {
+            throw new Error("Kunde inte updatera Lystnadsstatus")
+        }
+
+        //setAlbum(fetchedAlbum.map((a) => (a.id == id ? {...a, listeningStatus: !a.listeningStatus} : a )));
+
+        setAlbum(album.map((a) => 
+            a.id == id ? {...a, listeningStatus: !a.listeningStatus}  : a )
         );
+
+        setErr(null);
+        } catch (error) {
+            setErr(error.message);
+        }
+        
     }
 
     return (
