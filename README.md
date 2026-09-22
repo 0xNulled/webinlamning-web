@@ -3,9 +3,9 @@
 1. installera [Node.js v24](https://nodejs.org/en/download)
 
 2. clona repot
-´´´bash
+```bash
 git clone https://github.com/0xNulled/webinlamning-web
-´´´
+```
 
 3. Hoppa in i repo mappen
 ```bash
