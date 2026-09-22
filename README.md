@@ -8,19 +8,19 @@ git clone https://github.com/0xNulled/webinlamning-web
 ´´´
 
 3. Hoppa in i repo mappen
-´´´bash
+```bash
 cd webinlamning-web
-´´´
+```
 
 4. Installera npm paketet & dependencies
-´´´bash
+```bash
 npm install
-´´´
+```
 
 5. Starta hemsidan
-´´´bash
+```bash
 npm run dev
-´´´
+```
 
 6. Gör alla steg i README'n på backend projektet
 https://github.com/0xNulled/webinlamning-ASPNET 
