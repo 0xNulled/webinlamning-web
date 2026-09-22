@@ -2,12 +2,6 @@ import { useEffect, useState } from "react";
 import { ChangeEvent} from 'react';
 
 
-/*const AlbumsFetched = [
-    { id: 1, AlbumName: "III" , Artist: "Portrait decay" , ListeningStatus: true },
-    { id: 2, AlbumName: "Wretched Lives", Artist: "Demonic Science", ListeningStatus: false },
-    { id: 3, AlbumName: "Hivemind Narcosis", Artist: "Thantifaxath", ListeningStatus: false }
-]*/
-
 function BandCard({ onUpload }){
     const [album, setAlbum] = useState([]);
     const [err, setErr] = useState(true);
@@ -57,8 +51,6 @@ function BandCard({ onUpload }){
         if (!res.ok) {
             throw new Error("Kunde inte updatera Lystnadsstatus")
         }
-
-        //setAlbum(fetchedAlbum.map((a) => (a.id == id ? {...a, listeningStatus: !a.listeningStatus} : a )));
 
         setAlbum(album.map((a) => 
             a.id == id ? {...a, listeningStatus: !a.listeningStatus}  : a )

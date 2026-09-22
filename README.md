@@ -26,3 +26,4 @@ npm run dev
 https://github.com/0xNulled/webinlamning-ASPNET 
 
 7. Besök hemsidan (borde vara på port 5173)
+http://localhost:5173
