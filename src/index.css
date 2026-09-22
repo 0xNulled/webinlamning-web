@@ -10,6 +10,11 @@
 
 .Card {
     border: 1px solid black;
-    
+    width: 250px;
+
+    img {
+        width: 100px;
+        height: 100px;
+    }   
 
 }
