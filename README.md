@@ -25,5 +25,4 @@ npm run dev
 6. Gör alla steg i README'n på backend projektet
 https://github.com/0xNulled/webinlamning-ASPNET 
 
-7. Besök hemsidan (borde vara på port 5173)
-http://localhost:5173
+7. Besök hemsidan (http://localhost:5173)

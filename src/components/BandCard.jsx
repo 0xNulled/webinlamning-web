@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { ChangeEvent} from 'react';
 
 
 function BandCard({ onUpload }){
@@ -32,7 +31,6 @@ function BandCard({ onUpload }){
             method: "POST",
             body: formData
         })
-        //.then((res) => res.json())
         .then((data) => console.log(data))
         .catch((error) => console.error(error));
     }
